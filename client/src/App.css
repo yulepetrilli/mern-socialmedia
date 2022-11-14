@@ -1,0 +1,11 @@
+.home-header{
+    margin: 12px;
+    display: block !important;
+    text-align: center;
+    color: purple;
+}
+
+.form-container{
+    width: 500px;
+    margin: auto;
+}
