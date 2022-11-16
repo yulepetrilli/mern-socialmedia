@@ -3,26 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
 
 //GraphQL
-import { gql, useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
+import { SIGNUP_USER } from '../graphql/gql';
 
 //Components
 import { Button, Form } from 'semantic-ui-react';
 
 //Hooks
 import { useForm } from '../hooks';
-
-const SIGNUP_USER = gql`
-    mutation($registerInput: RegisterInput){
-        register(registerInput: $registerInput) {
-            id
-            email
-            username
-            createdAt
-            token
-        }
-    }
-
-`;
 
 export default function SignUp() {
     const context = useContext(AuthContext);
